@@ -19,17 +19,16 @@ describe('fetchBreedDescription', () => {
 
   it('should return no matching breeds when there are no breeds found in data', (done) => {
     fetchBreedDescription('Lighthouse', (err, desc) => {
-      
-      assert.equal(err, 'No matching breeds');
 
+      assert.equal(err, 'No matching breeds');
 
       const expectedDesc = undefined;
 
-      assert.equal(expectedDesc, desc);
+      assert.equal(expectedDesc, desc)
 
       done();
-    });
-  });
+    })
+  })
 
 
 
