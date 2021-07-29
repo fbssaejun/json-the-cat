@@ -25,11 +25,11 @@ describe('fetchBreedDescription', () => {
 
       const expectedDesc = undefined;
 
-      assert.equal(expectedDesc, desc)
+      assert.equal(expectedDesc, desc);
 
       done();
-    })
-  })
+    });
+  });
 
 
 
