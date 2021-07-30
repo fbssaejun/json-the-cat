@@ -4,8 +4,8 @@ const fetchBreedDescription = function(breedName, callback) {
   request(`https://api.thecatapi.com/v1/breeds/search?q=${breedName}`, (err,response, body) => {
     const data = JSON.parse(body);
     if (response === null) {
-      callback(err, null)
-      return
+      callback(err, null);
+      return;
     }
 
     if (data[0] === undefined) {
@@ -14,7 +14,7 @@ const fetchBreedDescription = function(breedName, callback) {
     }
 
     callback(null, data[0]['description']);
-
+    
   });
 };
 
@@ -33,7 +33,6 @@ module.exports = {fetchBreedDescription};
 //     })
 //     .then(function(myJson) {
 //       const breedResult = myJson[0];
-//       console.log(breedResult)
 //       if (!breedResult) {
 //         console.log("No Breed Found!");
 //         return;
@@ -45,6 +44,8 @@ module.exports = {fetchBreedDescription};
 //       console.log(e);
 //     });
 // };
+
+// module.exports = {fetchBreedDescription}
 
 
 // call function with one parameter (breedName) in index js
